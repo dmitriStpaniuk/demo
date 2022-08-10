@@ -1,0 +1,124 @@
+.post {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 2px solid #cecece; */
+
+  margin: 10px;
+  padding: 15px;
+}
+.post-content {
+  width: 100%;
+}
+h1 {
+  text-align: center;
+}
+
+.car-svg {
+  animation: linear move_eye;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+.car-svg_broken {
+  animation: linear move_eye;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+}
+@keyframes move_eye {
+  from {
+    margin-left: 0;
+    transform: rotate3d(2, 2, -5, 20deg);
+  }
+  to {
+    margin-left: calc(100% - 90px);
+  }
+}
+input[type="color"] {
+  -webkit-appearance: none;
+  border: none;
+  width: 40px;
+  height: 20px;
+  margin: 0 5px;
+}
+.input__wrapper {
+  display: flex;
+  align-items: center;
+}
+.svg {
+  margin-top: 15px;
+  flex-grow: 2;
+}
+.trava {
+  margin-top: -22px;
+  height: 30px;
+  width: 100%;
+  background-image: url("../img/trava.png");
+  background-size: contain;
+}
+.winner {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: 0.5s;
+}
+.modal.active{
+  transform: scale(1);
+}
+.modal-content{
+  padding: 20px;
+  border-radius: 10px;
+  background-color: aqua;
+  display: inline;
+}
+.container-winner {
+  margin: 0 auto;
+  width: 50vh;
+}
+.label-winner {
+  margin-top: 50px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-around;
+  background-color: aqua;
+}
+.label-winner button{
+  cursor: pointer;
+}
+.label-winner div {
+  margin-right: 10px;
+}
+.item-winner{
+  border: 1px solid ;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  text-align: center;
+}
+.item-winner div{
+  width: 20%;
+}
+.finish{
+  position: absolute;
+  right: 8%;
+
+}
